@@ -1,0 +1,22 @@
+<ion-tabs>
+    <ion-header>
+        <layout-toolbar></layout-toolbar>
+    </ion-header>
+    <ion-tab-bar slot="bottom">
+        <ion-tab-button (click)="presentCalendarOptionSheet()">
+            <ion-icon name="ios-calendar"></ion-icon>
+        </ion-tab-button>
+        <ion-tab-button>
+            <ion-icon name="ios-people" (click)="presentDeptOptionSheet()"></ion-icon>
+        </ion-tab-button>
+        <ion-tab-button>
+            <ion-icon name="ios-contact" (click)="showPersonSummary()"></ion-icon>
+        </ion-tab-button>
+        <ion-tab-button>
+            <ion-icon name="ios-briefcase" (click)="showStatistics()"></ion-icon>
+        </ion-tab-button>
+        <ion-tab-button>
+            <ion-icon name="ios-chatboxes" (click)="showChatMessage()"></ion-icon>
+        </ion-tab-button>
+    </ion-tab-bar>
+</ion-tabs>

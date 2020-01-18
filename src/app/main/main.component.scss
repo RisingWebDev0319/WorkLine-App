@@ -1,0 +1,11 @@
+:host {
+    ion-tab-bar {
+        --background: var(--ion-color-app-dark-blue);
+        --color: var(--ion-color-app-light-white);
+        height: 48px;
+
+        ion-tab-button ion-icon {
+            font-size: 32px;
+        }
+    }
+}

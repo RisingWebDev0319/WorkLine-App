@@ -1,0 +1,60 @@
+<ion-content>
+    <ion-row class="day-btn-group">
+        <ion-col size="3">
+            <ion-button expand="full" size="small" class="option-btn" [class.stat_opt]="stat_opt==0"
+                (click)="changeStatOption(0)">Day</ion-button>
+        </ion-col>
+        <ion-col size="3">
+            <ion-button expand="full" size="small" class="option-btn" [class.stat_opt]="stat_opt==1"
+                (click)="changeStatOption(1)">Week</ion-button>
+        </ion-col>
+        <ion-col size="3">
+            <ion-button expand="full" size="small" class="option-btn" [class.stat_opt]="stat_opt==2"
+                (click)="changeStatOption(2)">Month</ion-button>
+        </ion-col>
+        <ion-col size="3">
+            <ion-button expand="full" size="small" class="option-btn" [class.stat_opt]="stat_opt==3"
+                (click)="changeStatOption(3)">Year</ion-button>
+        </ion-col>
+    </ion-row>
+    <ion-list>
+        <ion-item class="summary-item" lines="none" (click)="showupdateInfo(0)">
+            <ion-label>
+                <h2 class="summary-title">Production</h2>
+                <h3 class="summary-unit">Target {{production.target * stat_times | number}}</h3>
+            </ion-label>
+            <ion-text class="summary-value">{{production.value * stat_times  | number}}</ion-text>
+        </ion-item>
+        <ion-item class="summary-item" lines="none" (click)="showupdateInfo(1)">
+            <ion-label>
+                <h2 class="summary-title">Billing</h2>
+                <h3 class="summary-unit">Target {{billing.target * stat_times  | number}}</h3>
+            </ion-label>
+            <ion-text class="summary-value">{{billing.value * stat_times | number}}</ion-text>
+        </ion-item>
+    </ion-list>
+
+    <accordion [title]="'TIME'" [expand]="true">
+        <ion-item><span class="accordion-item-title">Total hours</span><span
+                class="accordion-item-state">{{time.total_hour.value}} of {{time.total_hour.max}}</span></ion-item>
+        <ion-item><span class="accordion-item-title">Days worked</span><span
+                class="accordion-item-state">{{time.work_day.value}} of {{time.work_day.value}}</span></ion-item>
+        <ion-item><span class="accordion-item-title">Holiday</span><span
+                class="accordion-item-state">{{time.holiday.value}} of {{time.holiday.value}}</span></ion-item>
+        <ion-item><span class="accordion-item-title">Off work</span><span
+                class="accordion-item-state">{{time.off_work.value}} of {{time.off_work.value}}</span></ion-item>
+        <ion-item><span class="accordion-item-title">Personal days</span><span
+                class="accordion-item-state">{{time.personal_day.value}} of {{time.personal_day.value}}</span>
+        </ion-item>
+    </accordion>
+    <accordion [title]="'TASKS'" [expand]="true">
+        <ion-item><span class="accordion-item-title">Ended tasks</span><span
+                class="accordion-item-state">{{task.ended}}</span></ion-item>
+        <ion-item><span class="accordion-item-title">Active tasks</span><span
+                class="accordion-item-state">{{task.active}}</span></ion-item>
+        <ion-item><span class="accordion-item-title">Paused tasks</span><span
+                class="accordion-item-state">{{task.pause}}</span></ion-item>
+        <ion-item><span class="accordion-item-title">Cancelled tasks</span><span
+                class="accordion-item-state">{{task.cancel}}</span></ion-item>
+    </accordion>
+</ion-content>

@@ -1,0 +1,7 @@
+{
+  "name": "WorkLine",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

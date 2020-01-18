@@ -1,0 +1,33 @@
+<ion-content class="animated fadeIn">
+    <ion-grid>
+        <ion-row class="avatar-row" justify-content-center>
+            <ion-col text-center>
+                <img class="avatar-img" src="{{ user.avatar }}">
+            </ion-col>
+        </ion-row>
+        <ion-row class="profile-header">
+            <ion-col text-center>
+                <h3 class="profile-name">{{ user.name }}</h3>
+                <h5 class="profile-position">{{ user.position }}</h5>
+                <h5 class="profile-department"> {{user.department}}</h5>
+                <p class="profile-detail">{{ user.status }}</p>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-list> 
+                    <ion-item lines="none" *ngFor="let reminder of reminderList">
+                        <div class="reminder-wrapper">
+                            <h2 class="reminder-title">{{ reminder.title }}</h2>
+                            <p class="reminder-detail">{{ reminder.description }}</p>
+                            <p class="reminder-date">{{ getDateString(reminder.date) }} &nbsp;&nbsp;∙&nbsp;&nbsp; {{getTimeString(reminder.date)}}</p>
+                        </div>
+                        <a class="item" class="reminder-edit" float-right (click)="editReminder(reminder.id)">
+                            <ion-icon name="brush"></ion-icon>
+                        </a>
+                    </ion-item>
+                </ion-list>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

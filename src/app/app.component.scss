@@ -1,0 +1,20 @@
+:host {
+
+    /deep/ ion-toast.toast-error {
+        --background: var(--ion-color-secondary) !important;
+        font-size: 1.0rem;
+        font-weight: bold;
+    }
+
+    /deep/ ion-toast.toast-success {
+        --background: var(--ion-color-primary) !important;
+        font-size: 1.0rem;
+        font-weight: bold;
+    }
+
+    /deep/ ion-loading {
+        --height: 25px;
+        --width: 25px;
+    }
+
+}

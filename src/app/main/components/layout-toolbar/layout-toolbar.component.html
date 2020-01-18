@@ -1,0 +1,10 @@
+<ion-toolbar>
+    <ion-buttons slot="start">
+        <ion-icon slot="icon-only" name="ios-arrow-back" tappable *ngIf="isBackBtn" tappable (click)="backClick()"></ion-icon>
+    </ion-buttons>
+    <ion-title>{{pageTitle}}</ion-title>
+    <ion-buttons slot="end">
+        <ion-icon slot="icon-only" name="ios-add" tappable *ngIf="isPlusBtn" (click)="plusClick()"></ion-icon>
+        <ion-icon slot="icon-only" name="ios-settings" tappable *ngIf="isSettingBtn"></ion-icon>
+    </ion-buttons>
+</ion-toolbar>

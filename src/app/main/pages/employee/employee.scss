@@ -1,0 +1,102 @@
+:host {
+    ion-grid {
+        --ion-grid-padding: 0px;
+
+        ion-button.option-btn {
+            --background: #acd3d84f;
+            --color: var(--ion-color-app-dark-blue);
+            margin-left: 10px;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .avatar-img {
+            border-radius: 50%;
+            border: 2px solid #32485f;
+            width: 130px;
+            margin-top: 5px;
+        }
+
+        .profile-header {
+            color: var(--ion-color-app-dark-blue);
+            margin-top: 20px;
+
+            .profile-name {
+                margin-top: 0px;
+                margin-bottom: 5px;
+                font-size: 16px;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+
+            .profile-position,
+            .profile-department {
+                margin: 0;
+                font-size: 13px;
+                font-weight: normal;
+            }
+
+            .profile-detail {
+                margin: 13px 0px 0px 0px;
+                font-size: 14px;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+
+
+            ion-select.profile-select {
+                height: 22px;
+                border: 1px solid var(--ion-color-app-light-blue);
+                border-radius: 15px;
+                padding-top: 4px;
+                padding-bottom: 5px;
+                font-size: 12px;
+                margin-left: -10px;
+                margin-right: 10px;
+                margin-top: 5px;
+                padding-left: 10px;
+            }
+
+        }
+    }
+
+    ion-item {
+        border: 2px solid #acd3d84f;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 15px;
+
+        .reminder-wrapper {
+            padding: 12px 0px 0px 0px;
+            color: var(--ion-color-app-dark-blue);
+
+            .reminder-title {
+                margin: 0;
+                margin-bottom: 2px;
+                font-size: 17px;
+            }
+
+            .reminder-detail {
+                margin: 0px;
+                font-size: 14px;
+            }
+
+            .reminder-date {
+                margin: 0px;
+                margin-top: 10px;
+                margin-bottom: 3px;
+                font-size: 13px;
+                font-weight: bold;
+                color: var(--ion-color-app-light-blue);
+            }
+        }
+
+        .reminder-edit {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            color: var(--ion-color-app-light-blue);
+        }
+    }
+
+}

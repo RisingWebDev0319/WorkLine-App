@@ -1,0 +1,27 @@
+:host {
+    ion-toolbar {
+        --background: var(--ion-color-app-dark-blue);
+        --color: var(--ion-color-app-light-white);
+        padding-top: 10px;
+        height: 60px;
+
+        ion-title {
+            text-align: center;
+            font-size: 14px;
+        }
+
+        ion-buttons {
+            ion-icon {
+                font-size: 25px;
+            }
+        }
+
+        ion-buttons[slot=start] {
+            padding-right: 15px;
+        }
+        
+        ion-buttons[slot=end] {
+            padding-right: 15px;
+        }
+    }
+}

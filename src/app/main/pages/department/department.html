@@ -1,0 +1,44 @@
+<ion-content class="animated fadeIn">
+    <ion-list>
+        <ion-item class="summary-item" lines="none">
+            <ion-label>
+                <h2 class="summary-title">Members</h2>
+                <h3 class="summary-unit">Month</h3>
+            </ion-label>
+            <ion-text class="summary-value">{{department.members.value | number}}</ion-text>
+        </ion-item>
+        <ion-item class="summary-item" lines="none" (click)="showupdateInfo(1)">
+            <ion-label>
+                <h2 class="summary-title">Billing</h2>
+                <h3 class="summary-unit">$</h3>
+            </ion-label>
+            <ion-text class="summary-value">{{department.billing.value| number}}</ion-text>
+        </ion-item>
+        <ion-item class="summary-item" lines="none" (click)="showupdateInfo(0)">
+            <ion-label>
+                <h2 class="summary-title">Production</h2>
+                <h3 class="summary-unit">uds</h3>
+            </ion-label>
+            <ion-text class="summary-value">{{department.production.value | number}}</ion-text>
+        </ion-item>
+    </ion-list>
+
+    <accordion [title]="'TEAM'" [expand]="true">
+        <ion-item *ngFor="let user of userList" (click)="showEmployeePage(user)">
+            <span class="accordion-item-title">{{user.name}}</span>
+            <span class="accordion-item-state">{{getUserStatusLabel(user.status)}}</span>
+        </ion-item>
+    </accordion>
+
+    <accordion [title]="'TASK'" [expand]="true">
+        <ion-item *ngFor="let task of taskList"><span class="accordion-item-title">{{task.title}}</span><span
+                class="accordion-item-state">{{ getTaskStateLabel(task.status) }}</span>
+        </ion-item>
+    </accordion>
+
+    <ion-row text-center>
+        <ion-col>
+            <ion-button shape="round" class="calendar-btn" (click)="showDeptCalendar()">CALENDAR</ion-button>
+        </ion-col>
+    </ion-row>
+</ion-content>

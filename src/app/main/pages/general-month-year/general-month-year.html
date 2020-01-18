@@ -1,0 +1,19 @@
+<ion-content class="animated fadeIn">
+    <ion-calendar [options]="calendarOptions" [(ngModel)]="date" (select)="onSelectDate($event)"></ion-calendar>
+    <accordion title="General" class="accordion-item-border-none" [expand]="true">
+        <ion-item><span>Total hours <b>{{ general.hours }}</b> h</span></ion-item>
+        <ion-item><span>Total days <b>{{ general.days }}</b> d</span></ion-item>
+        <ion-item><span>Target stated <b>{{ general.target_state }}</b> uds</span></ion-item>
+        <ion-item><span>Target attached <b>{{ general.target_attach }}</b> uds</span></ion-item>
+        <ion-item *ngFor="let task of general.tasks"><span>{{ task.title }}</span></ion-item>
+        <ion-item *ngFor="let user of general.users"><span>{{ user.name }}</span></ion-item>
+    </accordion>
+    <accordion title="{{ dept.name }}" *ngFor="let dept of deptList" class="accordion-item-border-none">
+        <ion-item><span>Total hours <b>{{ dept.hours }}</b> h</span></ion-item>
+        <ion-item><span>Total days <b>{{ dept.days }}</b> d</span></ion-item>
+        <ion-item><span>Target stated <b>{{ dept.target_state }}</b> uds</span></ion-item>
+        <ion-item><span>Target attached <b>{{ dept.target_attach }}</b> uds</span></ion-item>
+        <ion-item *ngFor="let task of dept.tasks"><span>{{ task.title }}</span></ion-item>
+        <ion-item *ngFor="let user of dept.users"><span>{{ user.name }}</span></ion-item>
+    </accordion>
+</ion-content>

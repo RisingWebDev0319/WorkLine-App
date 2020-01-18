@@ -1,0 +1,40 @@
+:host {
+    ion-calendar {
+        padding: 5px;
+
+        /deep/ .title {
+            display: none;
+        }
+
+        /deep/ .week-title {
+            color: var(--ion-color-app-dark-blue) !important;
+            font-weight: bold;
+            font-size: 13px;
+        }
+
+        /deep/ .days-box {
+            padding-top: 0px;
+        }
+
+
+        /deep/ .days-btn {
+            color: black;
+            font-size: 14px;
+            font-weight: 600;
+        }
+    }
+
+    accordion {
+        /deep/ ion-card-header {
+            color: #84a3bb !important;
+            font-size: 17px !important;
+            font-weight: 500 !important;
+            border-bottom: 1px solid #94d6d552 !important;
+        }
+
+        /deep/ ion-card-content ion-list ion-item {
+            --background: #ebfbfaf5 !important;
+            --color: #3f4b67 !important;
+        }
+    }
+}

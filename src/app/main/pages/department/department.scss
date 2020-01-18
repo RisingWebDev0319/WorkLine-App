@@ -1,0 +1,75 @@
+:host {
+    ion-list {
+        padding-bottom: 0px;
+    }
+
+    .summary-item {
+        --border-width: 1px;
+        --border-color: #cacacaf5;
+        --border-radius: 10px;
+        margin: 15px;
+        margin-bottom: 10px;
+        height: 55px;
+        --min-height: 55px;
+        --padding-start: 12px;
+
+        ion-label {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .summary-title {
+            color: #26323ecc;
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 20px;
+            margin-bottom: 5px;
+            margin-top: 8px;
+        }
+
+        .summary-unit {
+            color: var(--ion-color-app-light-blue);
+            font-size: 14px;
+        }
+
+        .summary-value {
+            color: var(--ion-color-app-dark-blue);
+            text-align: right;
+            font-size: 35px;
+            margin-top: 5px;
+        }
+    }
+
+    accordion {
+        /deep/ ion-card-header {
+            color: #84a3bb !important;
+            font-size: 17px !important;
+            font-weight: 500 !important;
+            padding: 8px 15px 5px 15px !important;
+            border-bottom: 1px solid #94d6d552 !important;
+        }
+
+        /deep/ ion-card-content ion-list ion-item {
+            --background: #ebfbfaf5 !important;
+            --color: #3f4b67 !important;
+        }
+    }
+
+    .accordion-item-state {
+        text-align: right;
+        width: 65%;
+    }
+
+    .accordion-item-title {
+        text-align: left;
+        width: 55%;
+    }
+
+    .calendar-btn {
+        width: 60%;
+        height: 32px;
+        font-weight: bold;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}

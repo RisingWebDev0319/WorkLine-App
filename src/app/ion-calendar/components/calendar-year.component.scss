@@ -1,0 +1,67 @@
+:host {
+  ion-grid {
+    padding: 10px;
+  }
+
+  .year-title {
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--ion-color-app-light-blue);
+  }
+
+  .month-box {
+    display: inline-block;
+    width: 100%;
+
+    .month-title {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      font-size: 18px;
+      color: var(--ion-color-app-dark-blue);
+    }
+
+    .month-title.active {
+      color: var(--ion-color-app-light-blue);
+    }
+  }
+
+  .calendar-month /deep/ .days-box {
+    padding: 0px !important;
+    margin: 0px !important;
+  }
+
+  .calendar-month /deep/ .days-box .days {
+    padding: 0px !important;
+    margin: 0px !important;
+    height: 18px;
+  }
+
+  .calendar-month /deep/ .days-box .days .days-btn {
+    width: 18px;
+    height: 18px;
+    font-size: 7px;
+    font-weight: bold;
+    border-radius: 10px !important;
+  }
+
+  .calendar-month /deep/ .days-box .days .days-btn.today {
+    background-color: var(--ion-color-app-light-blue) !important;
+    color: #fff !important;
+
+    p {
+      color: #fff !important;
+    }
+  }
+
+  .calendar-month /deep/ .days-box .days .on-selected,
+  .calendar-month /deep/ .days-box .startSelection button.days-btn,
+  .calendar-month /deep/ .days-box .endSelection button.days-btn {
+    background-color: var(--ion-color-primary-contrast) !important;
+    color: #333 !important;
+
+    p {
+      color: #333 !important;
+      font-size: 1.2em !important;
+    }
+  }
+}

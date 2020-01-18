@@ -1,0 +1,72 @@
+:host {
+    ion-grid {
+        --ion-grid-padding: 0px;
+
+        ion-col {
+            --ion-grid-column-padding: 0px;
+
+            .search-wrapper {
+                border-bottom: 1px solid var(--ion-color-app-light-blue);
+                padding-left: 20px;
+                padding-right: 20px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+
+                ion-input {
+                    border-radius: 15px;
+                    --background: var(--ion-color-app-light-brown);
+                    height: 30px;
+                    --padding-start: 15px;
+                    --padding-top: 15px;
+                    --padding-end: 15px;
+                }
+            }
+
+            .list-wrapper {
+                padding: 0px;
+
+                .list-item {
+                    --padding-start: 0px;
+                    --padding-end: 0px;
+                    --border-color: var(--ion-color-app-light-blue);
+
+                    .item-image {
+                        border-radius: 50%;
+                        border: 2px solid var(--ion-color-app-dark-blue);
+                        width: 50px;
+                        margin-left: 15px;
+                        margin-top: -5px;
+                        margin-right: 10px;
+                    }
+
+                    .item-text-wrapper {
+                        padding: 0px;
+                        color: var(--ion-color-app-dark-blue);
+                        margin-top: 15px;
+                        margin-bottom: 15px;
+
+                        .text-title {
+                            margin: 0;
+                            margin-bottom: 5px;
+                            font-size: 17px;
+                        }
+
+                        .text-detail {
+                            margin: 0px;
+                            font-size: 14px;
+                        }
+                    }
+
+                    .item-right {
+                        position: absolute;
+                        right: 15px;
+                        top: 15px;
+                        color: var(--ion-color-app-light-blue);
+                        font-size: 12px;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+}

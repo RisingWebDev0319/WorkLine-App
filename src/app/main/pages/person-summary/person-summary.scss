@@ -1,0 +1,85 @@
+:host {
+    ion-grid {
+        --ion-grid-padding: 0px;
+    }
+
+    .avatar-row {
+        width: 100%;
+        height: 110px;
+        background: linear-gradient(to bottom, #39cfd0, #5a8693);
+
+        .avatar-img {
+            margin-top: 10px;
+            border-radius: 50%;
+            border: 2px solid var(--ion-color-app-dark-blue);
+            width: 120px;
+        }
+    }
+
+    .profile-header {
+        color: var(--ion-color-app-dark-blue);
+        margin-top: 30px;
+
+        .profile-name {
+            margin-top: 0px;
+            margin-bottom: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .profile-position,
+        .profile-department {
+            margin: 0;
+            margin-bottom: 2px;
+            font-size: 15px;
+            font-weight: normal;
+        }
+
+        .profile-detail {
+            margin: 5px 0;
+            font-size: 17px;
+            font-weight: bold;
+        }
+    }
+
+    ion-item {
+        border: 2px solid #d1ded4;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 15px;
+
+        .reminder-wrapper {
+            padding: 15px 0px 0px 0px;
+            color: var(--ion-color-app-dark-blue);
+
+            .reminder-title {
+                margin: 0;
+                margin-bottom: 5px;
+                font-size: 15px;
+                font-weight:bold;
+            }
+
+            .reminder-detail {
+                margin: 0px;
+                font-size: 14px;
+            }
+
+            .reminder-date {
+                margin: 0px;
+                margin-top: 10px;
+                margin-bottom: 3px;
+                font-size: 13px;
+                font-weight: bold;
+                color: var(--ion-color-app-light-blue);
+            }
+        }
+
+        .reminder-edit {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            color: var(--ion-color-app-light-blue);
+        }
+    }
+}

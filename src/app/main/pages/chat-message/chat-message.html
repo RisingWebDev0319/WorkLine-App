@@ -1,0 +1,30 @@
+<ion-content class="animated fadeIn">
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <div class="search-wrapper">
+                    <ion-input placeholder="Find" [(ngModel)]="searchKey" (ionChange)="searchUser()" ></ion-input>
+                </div>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-list class="list-wrapper">
+                    <ng-template ngFor let-user [ngForOf]="selectedUserList" let-i="index">
+                        <ion-item class="list-item" (click)="showChatMessageEmployee(user)">
+                            <img class="item-image"
+                                [src]="user.avatar == '' ? '../../assets/imgs/main/user.jpg' : user.avatar" />
+                            <div class="item-text-wrapper">
+                                <h2 class="text-title">{{user.name}}</h2>
+                                <p class="text-detail">Dolor sit amet, consectetur adipiscing elit,sed.</p>
+                            </div>
+                            <span class="item-right" float-right>
+                                10::35 am
+                            </span>
+                        </ion-item>
+                    </ng-template>
+                </ion-list>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

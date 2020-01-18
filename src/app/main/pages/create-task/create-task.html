@@ -1,0 +1,81 @@
+<ion-content class="animated fadeIn">
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <h5><span class="input-label">Title</span></h5>
+                <ion-input placeholder="Write Here" [(ngModel)]="task.title"></ion-input>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <h5><span class="input-label">Description</span></h5>
+                <ion-textarea placeholder="Write Here" [(ngModel)]="task.description"></ion-textarea>
+            </ion-col>
+        </ion-row>
+        <ion-row style="margin-top: 25px">
+            <ion-col>
+                <ion-item lines="none">
+                    <ion-text class="input-label">DATE</ion-text>
+                    <ion-select interface="popover" mod="ios" class="width-1" [(ngModel)]="date.day">
+                        <ion-select-option [value]="day" *ngFor="let day of dayList">{{day}}</ion-select-option>
+                    </ion-select>
+                    <ion-select interface="popover" mod="ios" placeholder="Month" class="width-2" [(ngModel)]="date.month"
+                        (ionChange)="changeDate()">
+                        <ion-select-option [value]="month" *ngFor="let month of monthList">{{month}}</ion-select-option>
+                    </ion-select>
+                    <ion-select interface="popover" mod="ios" placeholder="Year" class="width-3" [(ngModel)]="date.year"
+                        (ionChange)="changeDate()">
+                        <ion-select-option [value]="year" *ngFor="let year of yearList">{{year}}</ion-select-option>
+                    </ion-select>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-item lines="none">
+                    <ion-text class="input-label">DEPARTMENT</ion-text>
+                    <ion-select interface="popover" mod="ios" placeholder="DEPARTMENT" class="width-4" [(ngModel)]="task.department"
+                        (ionChange)="changeDept()">
+                        <ion-select-option [value]="department.id" *ngFor="let department of departmentList">{{department.name}}</ion-select-option>
+                    </ion-select>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-item lines="none">
+                    <ion-text class="input-label">SEND TO</ion-text>
+                    <ion-select interface="popover" mod="ios" placeholder="SEND TO" class="width-4" [(ngModel)]="task.user">
+                        <ion-select-option [value]="user.id" *ngFor="let user of userList">{{user.name}}</ion-select-option>
+                    </ion-select>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-item lines="none">
+                    <ion-text class="input-label">STATUS</ion-text>
+                    <ion-select interface="popover" mod="ios" placeholder="STATUS" class="width-4" [(ngModel)]="task.status">
+                        <ion-select-option [value]="1">Active</ion-select-option>
+                        <ion-select-option [value]="0">Deactive</ion-select-option>
+                    </ion-select>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-list>
+                    <ion-item lines="none">
+                        <ion-text class="input-label">ALERT</ion-text>
+                        <ion-toggle [(ngModel)]="task.alert"></ion-toggle>
+                    </ion-item>
+                </ion-list>
+            </ion-col>
+        </ion-row>
+        <ion-row text-center>
+            <ion-col>
+                <ion-button shape="round" class="send-btn" (click)="send()" >Send</ion-button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

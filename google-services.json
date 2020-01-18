@@ -1,0 +1,83 @@
+{
+  "project_info": {
+    "project_number": "1079694646868",
+    "firebase_url": "https://workline-56102.firebaseio.com",
+    "project_id": "workline-56102",
+    "storage_bucket": "workline-56102.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1079694646868:android:8a3cf7977c029a9f",
+        "android_client_info": {
+          "package_name": "com.workline.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1079694646868-9imm95h0f4d55ac97vkqivmmst1l4bd0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOQCCQ3HyJWdmJFlj0LkV8Cs4mjBo9umA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1079694646868-9imm95h0f4d55ac97vkqivmmst1l4bd0.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1079694646868-7toe1bne92tnf4ggantma0c4jqh5ou8e.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.workline.app"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1079694646868:android:23ee31487a15dce4",
+        "android_client_info": {
+          "package_name": "com.workline_employee.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1079694646868-9imm95h0f4d55ac97vkqivmmst1l4bd0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOQCCQ3HyJWdmJFlj0LkV8Cs4mjBo9umA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1079694646868-9imm95h0f4d55ac97vkqivmmst1l4bd0.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1079694646868-7toe1bne92tnf4ggantma0c4jqh5ou8e.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.workline.app"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

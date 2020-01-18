@@ -1,0 +1,29 @@
+<ion-content class="animated fadeIn">
+    <div style="width: 100%;">
+        <p class="hour-title">{{ dateData.time }}</p>
+        <p class="date-title">{{ dateData.date }}</p>
+    </div>
+    <div [style.height]="container.height + 'px'" class="progress-container">
+        <ng-template ngFor let-dept [ngForOf]="deptList" let-i="index">
+            <div [style.position]="'absolute'" [style.left]="dept.x + 'px'" [style.top]="dept.y + 'px'"
+                [style.width]="dept.radius*2 + 'px'" [style.height]="dept.radius*2 + 'px'" [attr.id]="'dept-' + (i + 1)"
+                (click)="showStatistics(dept)">
+                <round-progress [current]="dept.percent" [max]="100" [color]="'#32485f'" [background]="'#94d6d5'"
+                    [radius]="dept.radius" [stroke]="dept.radius / 5" [semicircle]="true" [clockwise]="false"
+                    [responsive]="false" [duration]="800" [animation]="'easeInOutQuart'" [animationDelay]="0">
+                </round-progress>
+                <span class="dept-title">{{dept.title}}</span>
+                <span class="dept-percent-title">{{dept.percent}}%</span>
+            </div>
+        </ng-template>
+        <div [style.position]="'absolute'" [style.left]="general.x + 'px'" [style.top]="general.y + 'px'"
+            [style.width]="general.width + 'px'" [style.height]="general.height + 'px'" class="general-container">
+            <div class="general-percent" [style.height]="(100 - general.percent) + 'px'"></div>
+            <span class="general-title">General</span>
+            <span class="general-percent-title">{{general.percent}}%</span>
+        </div>
+    </div>
+    <div class="general-info">
+        <ion-button>General Information</ion-button>
+    </div>
+</ion-content>

@@ -1,0 +1,35 @@
+<ion-content padding class="animated fadeIn">
+    <ion-grid>
+        <ion-row justify-content-center align-items-center style="margin-top:30px;">
+            <ion-col text-center padding-top>
+                <img src="/assets/imgs/logo.png" width="125">
+            </ion-col>
+        </ion-row>
+        <ion-row justify-content-center padding-top>
+            <ion-col size="10">
+                <div>
+                    <ion-item>
+                        <ion-label position="floating" class="label">User</ion-label>
+                        <ion-input type="text" placeholder="" [(ngModel)]="user.name"></ion-input>
+                    </ion-item>
+
+                    <ion-item style="margin-bottom: 10px;">
+                        <ion-label position="floating" class="label">Code</ion-label>
+                        <ion-input type="password" placeholder="" [(ngModel)]="user.code"></ion-input>
+                    </ion-item>
+                    <a class="button icon icon-right ion-chevron-right" routerLink="/auth/forgot-pass" padding-left
+                        style="padding-left: 0px; text-decoration: none;font-size:12px;">Forgot
+                        password?</a>
+                </div>
+
+            </ion-col>
+        </ion-row>
+        <ion-row justify-content-center align-items-center style="margin-top:50px">
+            <ion-col size="8">
+                <div padding>
+                    <ion-button expand="block" class="btn-login" (click)="login()" >Sign In</ion-button>
+                </div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

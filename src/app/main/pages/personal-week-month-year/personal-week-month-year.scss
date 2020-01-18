@@ -1,0 +1,102 @@
+:host {
+    padding-top: 10px;
+
+    calendar {
+        /deep/ .weekview-container {
+            padding-left: 15px;
+            padding-right: 15px;
+            height: 60%;
+            margin-bottom: 10px;
+        }
+
+        /deep/ .weekview-header {
+            border-style: none;
+            padding: 0px;
+        }
+
+        /deep/ th.weekview-header {
+            border-right: 1px solid #ddd;
+            padding: 0px;
+        }
+
+        /deep/ th.weekview-header:last-child {
+            border-right-style: none;
+        }
+
+        /deep/ .weekview-normal-event-table {
+            border-style: none;
+        }
+
+        /deep/ .weekview-normal-event-container {
+            margin-top: 35px;
+        }
+
+        /deep/ .calendar-hour-column {
+            font-size: 9px;
+            font-weight: bold;
+            width: 40px;
+            border-style: none;
+            color: var(--ion-color-app-dark-blue) !important;
+            height: 25px;
+            line-height: 25px;
+            padding: 0px;
+        }
+
+        /deep/ .custom-day-header {
+            font-size: 12px;
+            text-transform: uppercase;
+            color: var(--ion-color-app-dark-blue) !important;
+            line-height: 18px;
+        }
+
+        /deep/ .calendar-cell {
+            height: 25px;
+            line-height: 25px;
+        }
+
+        /deep/ .weekview-normal-event-container {
+            margin-top: 35px;
+        }
+
+        /deep/ .weekview-normal-event-table tr td.calendar-cell:nth-child(2n) {
+            border-left-style: none;
+            border-right-style: none;
+        }
+
+        /deep/ .calendar-event {
+            padding: 0px;
+        }
+
+        /deep/ .calendar-event-inner {
+            overflow: hidden;
+            color: white;
+            height: 100%;
+            width: 100%;
+            padding: 2px;
+            line-height: 15px;
+            text-align: initial;
+        }
+
+        /deep/ .calendar-event-inner-work {
+            background-color: var(--ion-color-app-light-blue);
+        }
+
+        /deep/ .calendar-event-inner-rest {
+            background-color: var(--ion-color-app-light-white);
+        }
+    }
+
+    accordion {
+        /deep/ ion-card-header {
+            color: #84a3bb !important;
+            font-size: 17px !important;
+            font-weight: 500 !important;
+            border-bottom: 1px solid #94d6d552 !important;
+        }
+
+        /deep/ ion-card-content ion-list ion-item {
+            --background: #ebfbfaf5 !important;
+            --color: #3f4b67 !important;
+        }
+    }
+}

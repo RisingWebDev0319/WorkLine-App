@@ -1,0 +1,33 @@
+:host {
+    .label {
+        margin-top: 18px;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        color: var(--ion-color-app-dark-blue);
+        font-weight: bold;
+    }
+
+    ion-input {
+        font-size: 12pt;
+        position: absolute;
+        left: 0px;
+        top: 42px;
+        --padding-start: 0;
+        --padding-end: 0;
+        --padding-bottom: 0;
+        --padding-top: 0;
+    }
+
+    ion-item {
+        --border-color: #39cfd0;
+        --border: 0px 0px 1px 0px;
+    }
+
+    ion-button.btn-login {
+        --border-radius: 10px;
+        --color: var(--ion-color-app-light-white);
+        font-weight: bold;
+    }
+
+}

@@ -1,0 +1,32 @@
+:host {
+    ion-content {
+        --background: url('../../../../assets/imgs/auth/home_bg.png') no-repeat 100% 100%;
+        height: 100%;
+
+        ion-button {
+            --border-radius: 10px;
+            width: 200px;
+
+            &.register-btn {
+                --color: var(--ion-color-app-dark-blue);
+                --background: #39cfd0;
+                --border: none;
+                font-weight: bold;
+            }
+
+            &.login-btn {
+                --color: var(--ion-color-app-light-white);
+                --border-width: 2px;
+                margin-top: 5px;
+                --border-color: #39cfd0;
+                --border-width: 2px;
+                font-weight: bold;
+            }
+        }
+
+        ion-text.legal-adivce {
+            color: var(--ion-color-app-light-brown);
+            font-size: 12px;
+        }
+    }
+}

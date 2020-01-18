@@ -1,0 +1,80 @@
+<ion-content class="animated fadeIn">
+    <ion-grid>
+        <ion-row style="margin-top: 25px;">
+            <ion-col>
+                <ion-item lines="none">
+                    <ion-text class="input-label">STARTING DATE</ion-text>
+                    <ion-select interface="popover" mod="ios" class="width-1" [(ngModel)]="start_date.day">
+                        <ion-select-option [value]="day" *ngFor="let day of start_DayList">{{day}}</ion-select-option>
+                    </ion-select>
+                    <ion-select interface="popover" mod="ios" placeholder="Month" class="width-2" [(ngModel)]="start_date.month"
+                        (ionChange)="changeStartDate()">
+                        <ion-select-option [value]="month" *ngFor="let month of start_MonthList">{{month}}</ion-select-option>
+                    </ion-select>
+                    <ion-select interface="popover" mod="ios" placeholder="Year" class="width-3" [(ngModel)]="start_date.year"
+                        (ionChange)="changeStartDate()">
+                        <ion-select-option [value]="year" *ngFor="let year of start_YearList">{{year}}</ion-select-option>
+                    </ion-select>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-item lines="none">
+                    <ion-text class="input-label">END DATE</ion-text>
+                    <ion-select interface="popover" mod="ios" class="width-1" [(ngModel)]="end_date.day">
+                        <ion-select-option [value]="day" *ngFor="let day of end_DayList">{{day}}</ion-select-option>
+                    </ion-select>
+                    <ion-select interface="popover" mod="ios" placeholder="Month" class="width-2" [(ngModel)]="end_date.month"
+                        (ionChange)="changeEndDate()">
+                        <ion-select-option [value]="month" *ngFor="let month of end_MonthList">{{month}}</ion-select-option>
+                    </ion-select>
+                    <ion-select interface="popover" mod="ios" placeholder="Year" class="width-3" [(ngModel)]="end_date.year"
+                        (ionChange)="changeEndDate()">
+                        <ion-select-option [value]="year" *ngFor="let year of end_YearList">{{year}}</ion-select-option>
+                    </ion-select>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-item lines="none">
+                    <ion-text class="input-label">REASON</ion-text>
+                    <ion-select interface="popover" mod="ios" placeholder="REASON" class="width-4" [(ngModel)]="dateData.reason">
+                            <ion-select-option [value]="0">Holiday</ion-select-option>
+                            <ion-select-option [value]="1">Vacation</ion-select-option>
+                    </ion-select>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-item lines="none">
+                    <ion-text class="input-label">SEND TO</ion-text>
+                    <ion-select interface="popover" mod="ios" placeholder="SEND TO" class="width-4" [(ngModel)]="dateData.user">
+                        <ion-select-option [value]="user.id" *ngFor="let user of userList">{{user.name}}</ion-select-option>
+                    </ion-select>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col style="margin-top: 10px;margin-bottom: 15px;">
+                <ion-item lines="none">
+                    <ion-text class="input-label">Pending</ion-text>
+                    <ion-toggle [(ngModel)]="dateData.pending"></ion-toggle>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <h5><span class="input-label">Comments</span></h5>
+                <ion-textarea placeholder="Write Here" [(ngModel)]="dateData.comments"></ion-textarea>
+            </ion-col>
+        </ion-row>
+        <ion-row text-center style="margin-top: 20px;">
+            <ion-col>
+                <ion-button shape="round" class="send-btn" (click)="send()">Send</ion-button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

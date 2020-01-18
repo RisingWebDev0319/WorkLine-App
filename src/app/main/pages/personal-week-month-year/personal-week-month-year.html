@@ -1,0 +1,29 @@
+<ion-content class="animated fadeIn">
+    <calendar [eventSource]="eventSource" [calendarMode]="calendar.mode" [currentDate]="calendar.currentDate"
+        [lockSwipes]="calendar.lockSwipes" [startHour]="calendar.startHour" [endHour]="calendar.endHour"
+        [formatHourColumn]="calendar.formatHourColumn" [formatWeekViewDayHeader]="calendar.formatWeekViewDayHeader"
+        [startingDayWeek]="calendar.startingDayWeek" [weekviewHeaderTemplate]="weekviewHeaderTemplate"
+        [weekviewNormalEventTemplate]="weekviewNormalEventTemplate">
+    </calendar>
+    <ng-template #weekviewHeaderTemplate let-viewDate="viewDate">
+        <div class="custom-day-header">
+            <span>{{ viewDate.date.getDate() }}</span><br />
+            <span>{{ viewDate.dayHeader }}</span>
+        </div>
+    </ng-template>
+    <ng-template #weekviewNormalEventTemplate let-displayEvent="displayEvent">
+        <div
+            class="calendar-event-inner {{displayEvent.event.type == 'work' ? 'calendar-event-inner-work' :'calendar-event-inner-rest'}}">
+            {{displayEvent.event.title}}</div>
+    </ng-template>
+    <accordion title="General" class="accordion-item-border-none" [expand]="true">
+        <ion-item><span>Total hours <b>{{ general.hours }}</b> h</span></ion-item>
+        <ion-item><span>Total days <b>{{ general.days }}</b> d</span></ion-item>
+        <ion-item><span>Target stated <b>{{ general.target_state }}</b> uds</span></ion-item>
+        <ion-item><span>Target attached <b>{{ general.target_attach }}</b> uds</span></ion-item>
+    </accordion>
+
+    <accordion title="Tasks" class="accordion-item-border-none">
+        <ion-item *ngFor="let task of taskList" (click)="onSelectTask(task)"><span>{{ task.title }}</span></ion-item>
+    </accordion>
+</ion-content>

@@ -1,0 +1,112 @@
+:host {
+    .hour-title {
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+        margin-top: 15px;
+        margin-bottom: 0px;
+        color: var(--ion-color-app-dark-blue);
+    }
+
+    .date-title {
+        text-align: center;
+        font-size: 13px;
+        font-weight: bold;
+        margin-top: 0px;
+        margin-bottom: 5px;
+        color: var(--ion-color-app-dark-blue);
+    }
+
+    .progress-container {
+        width: 100%;
+        position: relative;
+        margin-top: 15px;
+    }
+
+    .general-container {
+        width: 100%;
+        position: relative;
+        background-color: var(--ion-color-app-dark-blue);
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    .general-percent {
+        width: 100%;
+        background-color: var(--ion-color-app-light-blue);
+    }
+
+    .general-title {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        display: inline-grid;
+        align-items: center;
+        text-transform: uppercase;
+        font-size: 17px;
+        margin-top: -20px;
+        color: var(--ion-color-app-light-white);
+    }
+
+    .general-percent-title {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        display: inline-grid;
+        align-items: center;
+        margin-top: 10px;
+        font-size: 30px;
+        color: var(--ion-color-app-light-white);
+        font-weight: bold;
+    }
+
+
+    .dept-title {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        display: inline-grid;
+        align-items: center;
+        text-transform: uppercase;
+        font-size: 11px;
+        margin-top: -15px;
+        color: var(--ion-color-app-dark-blue);
+        font-weight: bold;
+    }
+
+    .dept-percent-title {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        display: inline-grid;
+        align-items: center;
+        margin-top: 10px;
+        font-size: 21px;
+        color: var(--ion-color-app-dark-blue);
+        font-weight: bold;
+    }
+
+    .general-info {
+        width: 100%;
+        text-align: center;
+
+        ion-button {
+            --border-radius: 20px;
+            --background: var(--ion-color-app-light-blue);
+            font-size: 12px;
+            height: 25px;
+        }
+    }
+}

@@ -1,0 +1,56 @@
+<ion-content class="animated fadeIn">
+    <ion-grid>
+        <ion-row>
+            <ion-col justify-content-center text-center>
+                <img class="avatar-img" src="{{user.avatar}}">
+            </ion-col>
+            <ion-col class="profile-header">
+                <h3 class="profile-name">{{user.name}}</h3>
+                <h5 class="profile-position">{{user.position}}</h5>
+                <h5 class="profile-department">{{user.department}}</h5>
+                <p class="profile-detail">{{user.status}}</p>
+                <ion-select interface="popover" placeholder="Time Select" class="profile-select" [(ngModel)]="alertOption" (ionChange)="changeAlertOption()">
+                    <ion-select-option [value]="0" selected="true">No Alert</ion-select-option>
+                    <ion-select-option [value]="1">10 minutes later</ion-select-option>
+                    <ion-select-option [value]="2">20 minutes later</ion-select-option>
+                    <ion-select-option [value]="3">30 minutes later</ion-select-option>
+                    <ion-select-option [value]="4">1 hour later</ion-select-option>
+                </ion-select>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-button expand="full" size="small" class="option-btn" (click)="showEmployeeSendMessage()">Send Message</ion-button>
+            </ion-col>
+            <ion-col>
+                <ion-button expand="full" size="small" class="option-btn">Geolocation</ion-button>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-button expand="full" size="small" class="option-btn" (click)="showEmployeeCalendar()">Calendar</ion-button>
+            </ion-col>
+            <ion-col>
+                <ion-button expand="full" size="small" class="option-btn" (click)="openStatisticsEmployee()">Statistics
+                </ion-button>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-list>
+                    <ion-item lines="none" *ngFor="let task of taskList">
+                        <div class="reminder-wrapper">
+                            <h2 class="reminder-title">{{task.title}}</h2>
+                            <p class="reminder-detail">{{task.description}}</p>
+                            <p class="reminder-date">{{ getDateString(task.end_date) }}</p>
+                        </div>
+                        <a class="item" class="reminder-edit" float-right (click)="editTask(task.id)">
+                            <ion-icon name="brush"></ion-icon>
+                        </a>
+                    </ion-item>
+                </ion-list>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+</ion-content>
